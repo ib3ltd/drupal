@@ -1,0 +1,13 @@
+<phpunit colors="true" processIsolation="true">
+  <php>
+    <server name="domain" value="https://example.dev"/>
+  </php>
+  <testsuites>
+    <testsuite name="modules">
+      <file>tests/modules/Module_Example.php</file>
+    </testsuite>
+    <testsuite name="pages">
+      <file>tests/pages/Page_Example.php</file>
+    </testsuite>
+  </testsuites>
+</phpunit>
