@@ -51,3 +51,5 @@ composer install
 npm install
 
 rm -rf .git
+rm -rf sites
+(cd sites && ln -s ../sites sites)
