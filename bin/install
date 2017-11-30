@@ -51,3 +51,7 @@ composer install
 npm install
 
 rm -rf .git
+ln -s html/core core
+ln -s html/profiles profiles
+ln -s html/modules modules
+ln -s html/themes themes
