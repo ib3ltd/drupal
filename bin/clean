@@ -1,0 +1,10 @@
+#! bin/bash
+
+rm -f web.config
+rm -f robots.txt
+rm -f .htaccess
+rm -f sites/default/default.services.yml
+rm -f sites/default/default.settings.php
+rm -f sites/development.services.yml
+rm -f sites/example.settings.local.php
+rm -f sites/example.sites.php
