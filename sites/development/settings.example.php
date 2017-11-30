@@ -4,13 +4,13 @@ assert_options(ASSERT_ACTIVE, TRUE);
 \Drupal\Component\Assertion\Handle::register();
 
 $settings['trusted_host_patterns'] = [
-  '^example\.dev$',
+  '#HOST#',
 ];
 
 $databases['default']['default'] = [
-  'database' => '',
-  'username' => '',
-  'password' => '',
+  'database' => '#DATABASE#',
+  'username' => '#USER#',
+  'password' => '#PASSWORD#',
   'prefix' => '',
   'host' => 'localhost',
   'port' => '3306',
