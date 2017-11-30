@@ -1,0 +1,53 @@
+#! bin/bash
+
+nl=$'\n'
+hash=$(php -r "echo md5(uniqid(rand(), true)).'_'.md5(uniqid(rand(), true));")
+
+echo "${nl}Which environment do you wish to install?${nl}- answer 1, 2 or 3${nl}"
+select environ in "development" "staging" "production"; do
+    case $environ in
+        development ) break;;
+        staging ) break;;
+        production ) break;;
+    esac
+done
+
+echo "${nl}Database Details"
+read -p 'Name: ' dbname
+read -p 'User: ' dbuser
+read -p 'Password: ' dbpass
+
+echo "${nl}Trusted Host"
+echo "${nl}Specify the preferred site connection?${nl}- answer 1, 2${nl}"
+select protocol in "http" "https"; do
+    case $protocol in
+        http ) break;;
+        https ) break;;
+    esac
+done
+read -p 'Domain (www.example.co.uk): ' domain
+
+unit="${protocol}://${$domain}"
+
+domain=$(echo $domain | sed 's|\.|\\\\.|g')
+domain="^${domain}$"
+
+cp sites/${environ}/settings.example.php sites/${environ}/settings.php
+sed -i "" "s|#HOST#|${domain}|" sites/${environ}/settings.php
+sed -i "" "s|#DATABASE#|${dbname}|" sites/${environ}/settings.php
+sed -i "" "s|#USER#|${dbuser}|" sites/${environ}/settings.php
+sed -i "" "s|#PASSWORD#|${dbpass}|" sites/${environ}/settings.php
+
+cp phpunit.example.xml phpunit.xml
+sed -i "" "s|#UNIT#|${unit}|" phpunit.xml
+
+cp sites/.env.example sites/.env
+sed -i "" "s|#VERSION#|${environ}|" sites/.env
+sed -i "" "s|#HASH#|${hash}|" sites/.env
+
+cp sites/default/settings.example.php sites/default/settings.php
+
+composer install
+npm install
+
+rm -rf .git

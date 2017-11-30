@@ -1,6 +1,6 @@
 <phpunit colors="true" processIsolation="true">
   <php>
-    <server name="domain" value="https://example.dev"/>
+    <server name="domain" value="#UNIT#"/>
   </php>
   <testsuites>
     <testsuite name="modules">
