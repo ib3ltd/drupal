@@ -27,7 +27,7 @@ select protocol in "http" "https"; do
 done
 read -p 'Domain (www.example.co.uk): ' domain
 
-unit="${protocol}://${$domain}"
+unit="${protocol}://${domain}"
 
 domain=$(echo $domain | sed 's|\.|\\\\.|g')
 domain="^${domain}$"
