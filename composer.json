@@ -63,15 +63,15 @@
             "merge-extra": false
         },
         "installer-paths": {
-            "core": ["type:drupal-core"],
-            "libraries/contrib/{$name}": ["type:drupal-library"],
-            "libraries/custom/{$name}": ["type:drupal-custom-library"],
-            "modules/contrib/{$name}": ["type:drupal-module"],
-            "modules/custom/{$name}": ["type:drupal-custom-module"],
-            "profiles/contrib/{$name}": ["type:drupal-profile"],
-            "profiles/custom/{$name}": ["type:drupal-custom-profile"],
-            "themes/contrib/{$name}": ["type:drupal-theme"],
-            "themes/custom/{$name}": ["type:drupal-custom-theme"]
+            "html/core": ["type:drupal-core"],
+            "html/libraries/contrib/{$name}": ["type:drupal-library"],
+            "html/libraries/custom/{$name}": ["type:drupal-custom-library"],
+            "html/modules/contrib/{$name}": ["type:drupal-module"],
+            "html/modules/custom/{$name}": ["type:drupal-custom-module"],
+            "html/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "html/profiles/custom/{$name}": ["type:drupal-custom-profile"],
+            "html/themes/contrib/{$name}": ["type:drupal-theme"],
+            "html/themes/custom/{$name}": ["type:drupal-custom-theme"]
         }
     },
     "autoload": {
