@@ -26,8 +26,8 @@ $settings = [
   'container_yamls' => [
     "{$app_root}/sites/{$version}/services.yml",
   ],
-  'file_public_path' => "{$app_root}/html/files/{$version}/public",
-  'file_private_path' => "{$app_root}/html/files/{$version}/private",
+  'file_public_path' => "files/{$version}/public",
+  'file_private_path' => "files/{$version}/private",
   'install_profile' => 'ib3_dist',
 ];
 
