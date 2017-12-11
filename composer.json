@@ -40,6 +40,7 @@
         "ib3/ib3": "^1.0",
         "ib3/ib3_dist": "^1.0",
         "ib3/ib3_toolkit": "^1.0"
+        "ib3/ib3_module_generator": "^1.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
