@@ -1,3 +1,6 @@
 vendor
 node_modules
 core
+html/modules/contrib
+html/themes/contrib
+html/profiles/contrib
