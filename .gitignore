@@ -5,5 +5,14 @@ html/modules/contrib
 html/themes/contrib
 html/profiles/contrib
 html/files/development/public/php/twig
+html/files/development/public/images
+html/files/development/public/styles
+html/files/development/public/files
 html/files/production/public/php/twig
+html/files/production/public/images
+html/files/production/public/styles
+html/files/production/public/files
 html/files/staging/public/php/twig
+html/files/staging/public/images
+html/files/staging/public/styles
+html/files/staging/public/files
