@@ -4,3 +4,6 @@ core
 html/modules/contrib
 html/themes/contrib
 html/profiles/contrib
+html/files/development/public/php/twig
+html/files/production/public/php/twig
+html/files/staging/public/php/twig
