@@ -13,6 +13,15 @@ var _css = [
   'html/themes/custom/ib3/src/sass/ib3.scss',
 ];
 
+var _fonts = [
+  'vendor/fortawesome/font-awesome/fonts/fontawesome-webfont.eot',
+  'vendor/fortawesome/font-awesome/fonts/fontawesome-webfont.svg',
+  'vendor/fortawesome/font-awesome/fonts/fontawesome-webfont.ttf',
+  'vendor/fortawesome/font-awesome/fonts/fontawesome-webfont.woff',
+  'vendor/fortawesome/font-awesome/fonts/fontawesome-webfont.woff2',
+  'vendor/fortawesome/font-awesome/fonts/FontAwesome.otf'
+];
+
 var _js_watch = [
   'node_modules/jquery/dist/jquery.js',
   'node_modules/popper.js/dist/umd/popper.js',
@@ -73,8 +82,14 @@ gulp.task('js', function () {
 gulp.task('clean', function () {
   return del([
     'html/themes/custom/ib3/static/css/*',
-    'html/themes/custom/ib3/static/js/*'
+    'html/themes/custom/ib3/static/js/*',
+    'html/themes/custom/ib3/static/fonts/*'
   ]);
+});
+
+gulp.task('fonts', function () {
+  return gulp.src(_fonts)
+  .pipe(gulp.dest('html/themes/custom/ib3/static/fonts'));
 });
 
 /**
@@ -89,9 +104,9 @@ gulp.task('cache', shell.task([
  * @task watch
  * Watch files and do stuff.
  */
-gulp.task('watch', ['clean', 'sass', 'js', 'cache'], function () {
-  gulp.watch(_css_watch, ['clean','sass','js','cache']);
-  gulp.watch(_js_watch, ['clean','sass','js','cache']);
+gulp.task('watch', ['clean', 'sass', 'js', 'fonts', 'cache'], function () {
+  gulp.watch(_css_watch, ['clean','sass','js','fonts','cache']);
+  gulp.watch(_js_watch, ['clean','sass','js','fonts','cache']);
 });
 
 /**
