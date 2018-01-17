@@ -1,0 +1,7 @@
+---
+box_url: file:///Users/les/tmp/ib3-centos7-0.0.7.box
+
+sync_options:
+    :type: virtualbox
+    :owner: apache
+    :group: apache
