@@ -1,8 +1,8 @@
 ---
 
 # System variables
-box_url: https://github.com/ib3ltd/ib3_centos/raw/master/ib3-drupal-1.0.1.box
-box: "ib3-drupal-1.0.1"
+box_url: https://github.com/ib3ltd/ib3_centos/raw/master/ib3-drupal-1.0.2.box
+box: "ib3-drupal-1.0.2"
 
 ip: "192.168.33.10"
 memory: 2048
