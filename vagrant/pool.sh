@@ -34,7 +34,7 @@ php_flag[display_errors] = off
 php_admin_value[error_log] = /var/log/php-fpm/$1-error.log
 php_admin_flag[log_errors] = on
 php_admin_value[memory_limit] = 128M
-php_admin_value[open_basedir] = /tmp:$2
+php_admin_value[open_basedir] = /usr/share/:/tmp/:$2/../
 
 php_value[session.save_handler] = files
 php_value[session.save_path]    = /var/lib/php/$1/session
