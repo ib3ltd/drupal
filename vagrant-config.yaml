@@ -1,42 +1,38 @@
 ---
 
 # System variables
-name: drupal
-box: ib3-centos7-0.0.7
-box_url: https://www.dropbox.com/s/lq1zt4ewh2p3dcg/ib3-centos7-0.0.7.box?dl=1
-box_download_checksum: 7fef4957035c71ea58526e43f6c82e98d4c87043053c74b353799d2a343abde7
-box_download_checksum_type: sha256
+box_url: https://github.com/ib3ltd/ib3_centos/raw/master/ib3-drupal-1.0.1.box
+box: "ib3-drupal-1.0.1"
 
 ip: "192.168.33.10"
 memory: 2048
 cpus: 1
-hostname: dev.#HOST#
+hostname: #HOST#
 
 # Synced folders
 folders:
-    - map: .
-      to: /var/www/vhosts/#HOST#
-    - map: vagrant
-      to: /vagrant
+  - map: .
+    to: /var/www/vhosts/#HOST#
+  - map: vagrant
+    to: /vagrant
 
-# Vhosts for apache
+# nginx and php-fpm pool
 sites:
-    - map: dev.#HOST#
-      to: /var/www/vhosts/#HOST#/html
+  - map: #HOST#
+    to: /var/www/vhosts/#HOST#/html
 
 # Vagrant sync options
 sync_options:
-    :type: smb
-    :owner: apache
-    :group: apache
-    :mount_options: ['noserverino']
+  :type: virtualbox
+  :owner: ib3client
+  :group: nginx
 
 # Databases and users
 databases:
-    - name: #DATABASE#
-      username: #USER#
-      password: #PASSWORD#
-      type: MySQL
+  - name: #DATABASE#
+    username: #USER#
+    password: #PASSWORD#
+    type: MySQL
 
 # Root database password
 dbrootpass: skippy28
