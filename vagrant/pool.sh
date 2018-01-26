@@ -18,10 +18,10 @@ pm.process_idle_timeout = 10s
 pm.max_requests = 500
 slowlog = /var/log/php-fpm/$1-slow.log
 
-request_slowlog_timeout = 5s
-request_terminate_timeout = 10s
+request_slowlog_timeout = 600
+request_terminate_timeout = 600
 
-;catch_workers_output = yes
+catch_workers_output = yes
 ;clear_env = no
 
 env[HOSTNAME] = $1
@@ -33,7 +33,7 @@ env[TEMP] = /tmp
 php_flag[display_errors] = off
 php_admin_value[error_log] = /var/log/php-fpm/$1-error.log
 php_admin_flag[log_errors] = on
-php_admin_value[memory_limit] = 128M
+php_admin_value[memory_limit] = 1024M
 php_admin_value[open_basedir] = /usr/share/:/tmp/:$2/../
 
 php_value[session.save_handler] = files
