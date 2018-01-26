@@ -94,6 +94,7 @@ server {
 
 echo "$block" > "/etc/nginx/sites-available/$1.conf"
 sudo ln -s /etc/nginx/sites-available/$1.conf /etc/nginx/sites-enabled/$1.conf
+sudo rm -rf /var/www/vhosts/$1/html/sites
 sudo ln -s /var/www/vhosts/$1/sites /var/www/vhosts/$1/html/sites
 sudo ln -s /var/www/vhosts/$1/sync /var/www/vhosts/$1/html/sync
 sudo service nginx restart
