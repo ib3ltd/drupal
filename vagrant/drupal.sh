@@ -7,7 +7,7 @@ server {
   root $2;
 
   charset utf-8;
-  client_max_body_size 128M;
+  client_max_body_size 256M;
 
   index index.php;
   access_log /var/log/nginx/$1.access.log;
@@ -65,7 +65,7 @@ server {
     fastcgi_param PATH_INFO \$fastcgi_path_info;
     fastcgi_param QUERY_STRING \$query_string;
     fastcgi_intercept_errors on;
-    fastcgi_read_timeout 600;
+    fastcgi_read_timeout 1200;
     fastcgi_buffers 8 128k;
     fastcgi_buffer_size 256k;
     fastcgi_pass unix:/var/run/php-fpm/$1.sock;
