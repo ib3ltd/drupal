@@ -52,7 +52,7 @@ server {
   }
 
   location @rewrite {
-    rewrite ^/(.*)$ /index.php?q=$1;
+    rewrite ^/(.*)$ /index.php?q=\$1;
   }
 
   location ~ '\\.php\$|^/update.php' {
