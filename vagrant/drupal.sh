@@ -57,8 +57,8 @@ server {
 
 
   location ~ '\\.php\$|^/update.php' {
-    fastcgi_split_path_info ^(.+?\\.php)(|/.*)\$;
     include fastcgi_params;
+    fastcgi_split_path_info ^(.+?\\.php)(|/.*)\$;
     fastcgi_hide_header X-Powered-By;
     fastcgi_index index.php;
     fastcgi_param HTTP_PROXY \"\";
@@ -69,6 +69,7 @@ server {
     fastcgi_read_timeout 1200;
     fastcgi_buffers 8 128k;
     fastcgi_buffer_size 256k;
+    fastcgi_keep_conn off;
     fastcgi_pass unix:/var/run/php-fpm/$1.sock;
   }
 
