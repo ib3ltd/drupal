@@ -40,6 +40,7 @@ php_value[session.save_handler] = files
 php_value[session.save_path]    = /var/lib/php/$1/session
 php_value[soap.wsdl_cache_dir]  = /var/lib/php/$1/wsdlcache
 php_value[opcache.file_cache]  = /var/lib/php/$1/opcache
+"
 
 echo "$pool" > "/etc/php-fpm.d/$1.conf"
 sudo service php-fpm restart
