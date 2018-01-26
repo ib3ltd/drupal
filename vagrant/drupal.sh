@@ -55,6 +55,7 @@ server {
     rewrite ^/(.*)$ /index.php?q=\$1;
   }
 
+
   location ~ '\\.php\$|^/update.php' {
     fastcgi_split_path_info ^(.+?\\.php)(|/.*)\$;
     include fastcgi_params;
