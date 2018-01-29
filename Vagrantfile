@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
   config.vm.box_url = settings["box_url"]
   config.vm.box_version = settings["version"]
   config.vm.hostname = settings["hostname"]
-  config.vm.network "private_network", ip: settings["ip"] ||= "192.168.33.10"
+  config.vm.network "private_network", ip: settings["ip"] ||= "192.168.33.11"
 
   if settings.has_key?("public_ip")
     config.vm.network "public_network", ip: settings["public_ip"]

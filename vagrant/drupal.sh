@@ -66,7 +66,7 @@ server {
     fastcgi_param PATH_INFO \$fastcgi_path_info;
     fastcgi_param QUERY_STRING \$query_string;
     fastcgi_intercept_errors on;
-    fastcgi_read_timeout 1200;
+    fastcgi_read_timeout 6000;
     fastcgi_buffers 8 128k;
     fastcgi_buffer_size 256k;
     fastcgi_keep_conn off;
