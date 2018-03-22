@@ -1,6 +1,6 @@
 vendor
 node_modules
-core
+html/core
 html/modules/contrib
 html/themes/contrib
 html/profiles/contrib
@@ -16,3 +16,5 @@ html/files/staging/public/php/twig
 html/files/staging/public/images
 html/files/staging/public/styles
 html/files/staging/public/files
+html/sites
+.DS_Store

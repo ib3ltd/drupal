@@ -57,6 +57,7 @@ gulp.task('sass', function () {
   .pipe($.sourcemaps.init())
   .pipe($.sass())
   .on('error', function (err) {
+    console.log(err);
     this.emit('end');
   })
   .pipe($.postcss(pcProcess))
