@@ -29,6 +29,7 @@ $settings = [
   'file_public_path' => "files/{$version}/public",
   'file_private_path' => "files/{$version}/private",
   'install_profile' => 'ib3_dist',
+  'maintenance_theme' => 'ib3',
 ];
 
 if (file_exists("{$app_root}/sites/{$version}/settings.php")) {
