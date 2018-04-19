@@ -4,6 +4,7 @@ html/core
 html/modules/contrib
 html/themes/contrib
 html/profiles/contrib
+html/files/development/public
 html/files/development/public/php/twig
 html/files/development/public/images
 html/files/development/public/styles
