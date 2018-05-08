@@ -41,7 +41,7 @@
         "ib3/ib3_admin": "^1.0",
         "ib3/ib3": "^1.0.9",
         "ib3/ib3_dist": "^1.0",
-        "ib3/ib3_toolkit": "^1.0.14",
+        "ib3/ib3_toolkit": "^1.0.15",
         "ib3/ib3_module_generator": "^1.0.3",
 	      "ib3/ib3_reports": "^1.0.1",
 	      "phpunit/phpunit": "^5.0",
